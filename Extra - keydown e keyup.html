@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery</title>
+		<script src="c:/jquery/jquery-3.3.1.min.js"></script>
+	</head>
+	<body>
+		<form>
+			<label>Digite um texto aqui:</label><br/>
+			<input type="text" id="txt">
+		</form>
+		<p id="p1"></p>
+		<p id="p2"></p>
+		<script>
+		//Cria a função a ser executada quando alguma tecla for solta no elemento com a tag txt
+			$("#txt").keyup(function(){
+				//Atribui no elemeto com id p1 o valor atual no elemento com o id txt
+				$("#p1").text($("#txt").val());
+				//Atribui no elemeto com id p2 um texto vazio
+				$("#p2").text("");
+		//Atribui no elemeto com id p2 a frase ente as aspas		
+			}).keydown(function(){
+				//Atribui no elemeto com id p2 a frase ente as aspas
+				$("#p2").text("tecla pressionada");
+			});
+		</script>
+	</body>
+</html>

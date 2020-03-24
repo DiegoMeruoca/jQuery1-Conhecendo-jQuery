@@ -1,0 +1,38 @@
+<html lang=“pt-br”>
+	<head>
+		<title>Desafio 2</title>
+		<meta charset=“UTF-8”>
+		<script src="c:/jquery/jquery-3.3.1.min.js"></script>
+		<script>	
+			$(document).ready(function(){//Testa se o documento está pronto
+				$("#btCalc").click(function(){//Cria uma função caso o usuario clique no botão
+					let n1=parseInt($("#Nota1").val());//Atribui o valor do input na variavel
+					let n2=parseInt($("#Nota2").val());//Atribui o valor do input na variavel
+					let media=(n1+n2)/2;//Calcula a média
+					$("#fResult").val(media);//Exibe o resultado no form
+					if(media>=7){//Se a média for maior ou igual a 7
+						situac="Aprovado"; //situac recebe Aprovado
+					}else{//Senão
+						situac="Reprovado";//situac recebe Aprovado
+					}
+					$("#fSituac").val(situac);//Exibe o resultado no form
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<form id="f_calc">
+			<label>Nome </label>
+			<input type="text" id="Nme" /><br/><br/>
+			<label>Nota 1</label>
+			<input type="text" id="Nota1" value="0"/><br/><br/>
+			<label>Nota 2</label>
+			<input type="text" id="Nota2" value="0"/><br/><br/>
+			<label>Media </label>
+			<input type="text" id="fResult" disabled><br><br>
+			<label>Situação </label>
+			<input type="text" id="fSituac" disabled><br><br>
+			<input type="button" id="btCalc" value="Calcular"/>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Desafio 1</title>
+		<script src="c:/jquery/jquery-3.3.1.min.js"></script>
+		<script>
+			$(document).ready(function(){//Testa se o documento está pronto
+				$( "#escuro" ).click(function() {//Fun??o executada ao clicar no obj com id "escuro"
+					$("#corpo").css({backgroundColor:"black", color:"white", fontFamily:"Algerian"});//Altera o estilo
+				});
+				$( "#claro" ).click(function() {//Fun??o executada ao clicar no obj com id "claro"
+					$("#corpo").css({backgroundColor:"white", color:"black", fontFamily:"Gigi"});//Altera o estilo
+				});
+			});
+		</script>	
+	</head>
+	<body id="corpo" style="font-family:'Gigi'"}>
+		<h2>
+			<div id="claro">
+				Tema Ligth
+			</div>
+			<div id="escuro">
+				Tema Dark
+			</div>
+		</h2>	
+	</body>
+</html>

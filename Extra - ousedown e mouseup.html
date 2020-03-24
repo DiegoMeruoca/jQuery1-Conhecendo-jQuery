@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery</title>
+		<script src="c:/jquery/jquery-3.3.1.min.js"></script>
+	</head>
+	<body>
+		<p id="txt1">Pressione e solte o botão do mouse sobre este texto...</p>
+		<p id="txt2"></p>
+		<script>
+		//Cria a função a ser executada enquanto o click esta pressionado no elemento de txt1
+			$("#txt1").mousedown(function(){
+				//Atribui a frase no <p> com id txt2
+				$("#txt2").text("Botão do mouse para BAIXO");
+		//Cria a função a ser executada quanoo o click for solto no elemento de id txt1	
+			}).mouseup(function(){
+				//Atribui a frase no <p> com id txt2
+				$("#txt2").text("Botão do mouse para CIMA");
+			});
+		</script>
+	</body>
+</html>

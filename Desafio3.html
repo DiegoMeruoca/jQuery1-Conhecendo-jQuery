@@ -1,0 +1,56 @@
+<html lang=“pt-br”>
+	<head>
+		<title>Desafio 3</title>
+		<meta charset=“UTF-8”>
+		<script src="c:/jquery/jquery-3.3.1.min.js"></script>
+		<script>
+			$(document).ready(function(){//Testa se o documento está pronto
+				$("#btSoma").click(function(){//Cria uma função caso o usuario clique no botão Somar
+					let v1=parseInt($("#f_v1").val());//Atribui o valor do input na variavel
+					let v2=parseInt($("#f_v2").val());//Atribui o valor do input na variavel
+					let result=v1+v2;//Soma os valores
+					$("#fResult").val(result);//Exibe o resultado no form
+				});
+				
+				$("#btSub").click(function(){//Cria uma função caso o usuario clique no botão Subtrair
+					let v1=parseInt($("#f_v1").val());//Atribui o valor do input na variavel
+					let v2=parseInt($("#f_v2").val());//Atribui o valor do input na variavel
+					let result=v1-v2;//Subtrai os valores
+					$("#fResult").val(result);//Exibe o resultado no form
+				});
+				
+				$("#btMult").click(function(){//Cria uma função caso o usuario clique no botão Multiplicar
+					let v1=parseInt($("#f_v1").val());//Atribui o valor do input na variavel
+					let v2=parseInt($("#f_v2").val());//Atribui o valor do input na variavel
+					let result=v1*v2;//Multiplica os valores
+					$("#fResult").val(result);//Exibe o resultado no form
+				});
+				
+				$("#btDiv").click(function(){//Cria uma função caso o usuario clique no botão Dividir
+					let v1=parseInt($("#f_v1").val());//Atribui o valor do input na variavel
+					let v2=parseInt($("#f_v2").val());//Atribui o valor do input na variavel
+					if(v2==0){//Se o segundo valor for 0
+						let result="Não existe divisão por zero!";//Resultado recebe esta frase
+					}else{
+						let result=v1/v2;//Divide os valores
+					}
+					$("#fResult").val(result);//Exibe o resultado no form
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<form id="f_calc">
+			<label>Valor 1</label>
+			<input type="text" id="f_v1" value="0"/><br/><br/>
+			<label>Valor 2</label>
+			<input type="text" id="f_v2" value="0"/><br/><br/>
+			<label>Resultado</label>
+			<input type="text" id="fResult" disabled><br><br>
+			<input type="button" id="btSoma" value="+"/>
+			<input type="button" id="btSub" value="-"/>
+			<input type="button" id="btMult" value="*"/>
+			<input type="button" id="btDiv" value="/"/>
+		</form>
+	</body>
+</html>

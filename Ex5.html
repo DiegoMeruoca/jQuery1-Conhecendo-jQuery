@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery</title>
+		<script src="c:/jquery/jquery-3.3.1.min.js"></script>
+		<style>
+			#bloco{ width:200px;
+			height:200px;
+			background-color:#f00;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="bloco"></div>
+		<p></p>
+		
+		<script>
+		//Cria a função a ser executada quando o 
+		//cursor entra no elemento com a tag bloco
+			$("#bloco").mouseenter(function(){
+				$("p").text("Mouse foi posicionado sobre a div");
+				//Atribui o texto 
+		//Cria a função a ser executada quando o cursor sai do 
+		//elemento com a tag bloco	
+			}).mouseleave(function(){
+				$("p").text("Mouse saiu de cima da div");
+				//Atribui o texto
+			});
+		</script>
+	</body>
+</html>
